@@ -1,0 +1,35 @@
+<?php
+
+use yii\db\Migration;
+
+/**
+ * Class m200221_151335_create_table_article
+ */
+class m200221_151335_create_table_article extends Migration
+{
+    public function up()
+    {
+        $this->execute("
+            CREATE TABLE article (
+            id int(11) NOT NULL AUTO_INCREMENT,
+            title varchar(64) NOT NULL,
+            slug varchar(64) NOT NULL,
+            author varchar(64) NOT NULL,
+            category_id int(11) NOT NULL,
+            date_create DATETIME NOT NULL,
+            date_update DATETIME NOT NULL,
+            status varchar(64) NOT NULL,
+            content varchar(65536),
+            short_content varchar(65536),
+            rating int(11),
+            PRIMARY KEY (id)
+            ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+            ");
+    }
+
+    public function down()
+    {
+        echo "m200221_151335_test_table cannot be reverted.\n";
+        return false;
+    }
+}
