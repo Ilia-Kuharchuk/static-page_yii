@@ -48,6 +48,7 @@ $config = [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
+                '/site/login' => '/site/login.html';
             ],
         ],
     ],
