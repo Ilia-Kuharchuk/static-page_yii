@@ -10,7 +10,7 @@ class m200221_151335_create_table_category extends Migration
     public function up()
     {
         $this->execute("
-            CREATE TABLE article (
+            CREATE TABLE category (
             id int(11) NOT NULL AUTO_INCREMENT,
             title varchar(64) NOT NULL,
             id_parent int(11) NOT NULL,
